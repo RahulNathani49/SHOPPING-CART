@@ -1,0 +1,19 @@
+body{
+    font-family: 'Varela Round', sans-serif;
+    background-color: #00517c;
+    color: white;
+}
+img{
+    border-radius: 20px;
+    width:250px;
+}
+
+.item{
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.dropitems{
+    background-color: #041c3c;
+    border-radius: 30px;
+    
+}
