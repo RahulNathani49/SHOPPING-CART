@@ -4,16 +4,28 @@ body{
     color: white;
 }
 img{
-    border-radius: 20px;
-    width:250px;
+ 
+    width:100%;
 }
-
+.dragonly{
+    padding: 20px 0;
+}
 .item{
     margin-bottom: 30px;
     cursor: pointer;
+    box-shadow: 
 }
 .dropitems{
     background-color: #041c3c;
-    border-radius: 30px;
-    
+   
+}
+.plus{
+
+}
+h4{
+    font-weight: 400;
+}
+.item h4 i{
+    display: none;
+    cursor: pointer;
 }

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> MY ORDER </title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome -->
@@ -17,97 +18,121 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+ 
 </head>
 
 <body class="h-100">
- <div class="container-fluid">
-   
-   <div class="row">
-      <div class="col-12">
-       <h1 class="text-center py-3">GET MY ORDER</h1>
-       </div>
-   </div>
-     
-    <div class="row justify-content-center">
-        <div class="col-8">
-            <div class="row items mr-3">
-               <div class="col-4 item" draggable="true"ondragstart="dragStart(event)"id="dragtarget">
-                   
-                   <img src="images/pavbhaji.jpg">
-                   <h4 class="text-center py-2 price">80/-</h4>
-               </div>
-               <div class="col-4 item"draggable="true"ondragstart="dragStart(event)"id="dragtarget2">
-                
-                  <img src="images/burger.jpg"  >
-                   <h4 class="text-center py-2 price">50/-</h4>                  
-               </div>
-               <div class="col-4 item"draggable="true"ondragstart="dragStart(event)"id="dragtarget3">
-                   
-                  <img src="images/pizza.jpg"  >
-                   <h4 class="text-center py-2 price">120/-</h4> 
-               </div>
-                <div class="col-4 item"draggable="true"ondragstart="dragStart(event)"id="dragtarget4">
-                  
-                   <img src="images/dosa.jpg"  >
-                   <h4 class="text-center py-2 price">70/-</h4>
-               </div>
-               <div class="col-4 item"draggable="true"ondragstart="dragStart(event)"id="dragtarget5">
-                 
-                   <img src="images/vadapav.jpg"  >
-                   <h4 class="text-center py-2 price">25/-</h4>
-               </div>
-               <div class="col-4 item"draggable="true"ondragstart="dragStart(event)"id="dragtarget6">
-                
-                   <img src="images/fries.jpg"  >
-                   <h4 class="text-center py-2 price">
-                    75/-
-                   </h4>
-               </div>
-            </div>
-        </div>
-        <div class="col-4 dropitems">
-          
-           <div class="row">
-             <div class="col-12">
-              <h5 class="text-center py-3"> DROP ITEMS HERE</h5>
-              </div> 
-           </div>
-            <div class="row drop justify-content-center" id="drop">
-                
-                <div class="col-8" ondrop="drop(event)" style="width:310px;height:230px;border:3px dotted red;border-radius: 20px;" ondragover="allowDrop(event)">
-                
-                                 
-                    
-                </div>
-                <div class="col-8" ondrop="drop(event)" style="width:310px;height:230px;border:3px dotted red;border-radius: 20px;" ondragover="allowDrop(event)">
-                
-                                 
-                    
-                </div>
-                   <div class="col-8" ondrop="drop(event)" style="width:310px;height:230px;border:3px dotted red;border-radius: 20px;" ondragover="allowDrop(event)">
-                
-                                 
-                    
-                </div>
-         
-                <div class="col-12">
-                    
-                </div>
-                
-                <button type="button" class="btn btn-outline-success waves-effect" onclick="count()">SUBMIT</button>
-                <div class="col-12">
-                <p class="text-center" id="display">PRICE</p>
-                </div> 
-                
-          
-            </div>
-        </div>
-    </div>
-     
- </div>
- 
+    <div class="container-fluid">
 
- <!-- SCRIPTS -->
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center py-3">GET MY ORDER</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center " >
+            <div class="col-8" id="main">
+                <div class="row items mr-3">
+                   
+                    <div class="col-4 item">
+                       <div style="box-shadow: 0px 1px 10px 1px #ff9068;height: 266px;width: 100%;" draggable="true" ondragstart="dragStart(event)"ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="dragonly"draggable="true" ondragstart="dragStart(event)"  id="dragtarget">
+
+                            <img src="images/pavbhaji.jpg">
+                            <h4 class="text-center py-2 float-left pl-1">80/-</h4>
+                            
+                            <button type="button" class="btn btn-outline-danger waves-effect float-right" onclick="delitem(this)" style="display:none;">REMOVE</button> 
+
+                        </div>
+                        </div>    
+                    </div>
+                    <div class="col-4 item" >
+                       <div style="box-shadow: 0px 1px 10px 1px #ff9068;height: 266px;width: 100%;">
+                        <div class="dragonly    " draggable="true" ondragstart="dragStart(event)" id="dragtarget2">
+                            <img src="images/burger.jpg">
+                            <h4 class="text-center py-2   float-left pl-1">50/-</h4>
+                            <button type="button" class="btn btn-outline-danger waves-effect float-right" onclick="delitem(this)" style="display:none;">REMOVE</button>
+
+                       
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4 item" >
+                       <div style="box-shadow: 0px 1px 10px 1px #ff9068;height: 266px;width: 100%;">
+                        <div class="dragonly    " draggable="true" ondragstart="dragStart(event)" id="dragtarget3">
+                            <img src="images/pizza.jpg">
+                            <h4 class=" py-2  pl-1 float-left">120/-</h4>
+                            <button type="button" class="btn btn-outline-danger waves-effect float-right" onclick="delitem(this)" style="display:none;">REMOVE</button>
+
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4 item" >
+                       <div style="box-shadow: 0px 1px 10px 1px #ff9068;height: 266px;width: 100%;">
+                        <div class="dragonly    " draggable="true" ondragstart="dragStart(event)" id="dragtarget4">
+                            <img src="images/dosa.jpg">
+                            <h4 class="text-center py-2 float-left pl-1 ">70/-</h4>
+                            <button type="button" class="btn btn-outline-danger waves-effect float-right" onclick="delitem(this)" style="display:none;">REMOVE</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-4 item" >
+                       <div style="box-shadow: 0px 1px 10px 1px #ff9068;height: 266px;width: 100%;">
+                        <div class="dragonly    " draggable="true" ondragstart="dragStart(event)" id="dragtarget5" >
+                        <img src="images/vadapav.jpg">
+                        <h4 class="text-center py-2 float-left pl-1 ">25/-</h4>
+                            <button type="button" class="btn btn-outline-danger waves-effect float-right" onclick="delitem(this)" style="display:none;">REMOVE</button>
+                        </div>
+                       </div> 
+                    </div>
+                    <div class="col-4 item" >
+                    <div style="box-shadow: 0px 1px 10px 1px #ff9068;height: 266px;width: 100%;">
+                    <div class="dragonly    " draggable="true" ondragstart="dragStart(event)" id="dragtarget6">
+                        <img src="images/fries.jpg">
+                        <h4 class="text-center py-2 float-left pl-1 ">75/-</h4>
+                            <button type="button" class="btn btn-outline-danger waves-effect float-right" onclick="delitem(this)" style="display:none;">REMOVE</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 dropitems">
+
+                <div class="row">
+                    <div class="col-12 ">
+                        
+                        <h5 class="float-left   py-2 mt-3 px-3"><i class="fas fa-shopping-cart"></i></h5>
+                        <div class="circle float-left mt-3" style="height:40px;width:40px;border-radius: 50%; border:1px solid white; ">
+                            <h5 class="text-center" style="line-height: 40px;" id="cartcount">0</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="row drop justify-content-center" id="drop">
+
+
+
+
+                    <div class="col-12">
+                          
+                        <p class="text-center py-3 " id="display" style="font-size: 30px;">TOTAL = 0rs only</p>
+                         <h1 class="text-center plus"><i class="fas fa-plus"></i></h1>
+                    </div>
+
+
+                </div>
+                
+                <div class="row" ondrop="drop(event)" ondragover="allowDrop(event)"style="padding: 80px ;background-color:#041c3c; " id="droppeditem">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap tooltips -->
