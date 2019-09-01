@@ -3,6 +3,9 @@ body{
     color: black;
     background: transparent;
 }
+img:hover{
+    border: 3px solid red;
+}
 
 header{
     background-color: #fff;
